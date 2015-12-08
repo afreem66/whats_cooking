@@ -18,3 +18,12 @@ app.controller('calendarController', function () {
   // }
 
 });
+
+app.controller('listController', function () {
+  var controller = this;
+  this.shoppingList = [];
+
+  this.addItem = function () {
+    controller.shoppingList.push(controller.item)
+  }
+})

@@ -8,7 +8,7 @@
     <title>What's Cooking</title>
   </head>
   <body>
-    <div ng-controller="calendarController as Ctrl">
+    <section ng-controller="calendarController as Ctrl">
       <form class="day" action="index.html">
         <select class="weekday" name="">
           <option value="monday">Monday</option>
@@ -29,9 +29,7 @@
       <h1>hello</h1>
       <table>
         <tr>
-          <th>
-            
-          </th>
+          <th></th>
           <th>
             Monday
           </th>
@@ -80,6 +78,17 @@
           </td>
         </tr>
       </table>
-    </div>
+    </section>
+    <section ng-controller="listController as listCtrl">
+      <form class="" ng-submit="listCtrl.addItem()">
+        <input type="text" ng-model="listCtrl.item">
+        <input type="submit" value="Add Item">
+      </form>
+    <ul>
+      <li class="list" ng-repeat="item in listCtrl.shoppingList track by $index">
+        {{item}}
+      </li>
+    </ul>
+  </section>
   </body>
 </html>
