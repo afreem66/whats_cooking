@@ -25,5 +25,6 @@ app.controller('listController', function () {
 
   this.addItem = function () {
     controller.shoppingList.push(controller.item)
+    controller.item = null;
   }
 })
