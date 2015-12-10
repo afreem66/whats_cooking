@@ -1,5 +1,6 @@
 var express = require('express'),
     server = express(),
+    PORT = process.env.PORT || 3000,
     bodyParser = require('body-parser'),
     morgan = require('morgan');
 
@@ -14,6 +15,6 @@ server.get('/kevinisdumb', function (req, res) {
     })
 });
 
-server.listen(3000, function () {
-  console.log("Let's get cookin");
+server.listen(PORT, function () {
+  console.log("Let's get cookin on port " + PORT);
 });
