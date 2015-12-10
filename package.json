@@ -1,0 +1,25 @@
+{
+  "name": "whats_cooking",
+  "version": "1.0.0",
+  "description": "Recipe planning application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afreem66/whats_cooking.git"
+  },
+  "author": "Andrew Freeman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/afreem66/whats_cooking/issues"
+  },
+  "homepage": "https://github.com/afreem66/whats_cooking#readme",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "morgan": "^1.6.1"
+  }
+}
