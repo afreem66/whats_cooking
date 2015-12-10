@@ -54,6 +54,10 @@ header {
   font-size: 3rem;
 }
 
+.day p {
+  font-size: 1rem;
+}
+
 #sunday {
   left: 0;
   margin-left: 1.2rem;
@@ -87,7 +91,6 @@ header {
 
 .result {
   display: inline-block;
-  position: ;
   height: 250px;
   width: 250px;
   background: #E4F1FE;

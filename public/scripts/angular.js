@@ -50,10 +50,11 @@ app.controller('calendarController', ['$http', function ($http) {
       controller.calendar.thursday = controller.recipe.label
     } else if (controller.day === "friday") {
       controller.calendar.friday = controller.recipe.label
-    } else {
-      controller.calenda.saturday = controller.recipe.label
+    } else if (controller.day === "saturday"){
+      controller.calendar.saturday = controller.recipe.label
     }
   }
+
   this.setRecipe = function () {
     console.log('clicked');
     controller.calendar.night = controller.recipe.label
