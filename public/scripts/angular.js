@@ -39,9 +39,28 @@ app.controller('calendarController', ['$http', function ($http) {
       controller.searchTerm = null
     }
 
-    if (controller.day == "monday") {
-
-    } else
+    if (controller.day == "sunday") {
+      controller.calendar.sunday = calendar.recipe
+      controller.recipe = null;
+    } else if (controller.day == "monday") {
+      controller.calendar.monday = calendar.recipe
+      controller.recipe = null;
+    } else if (controller.day == "tuesday") {
+      controller.calendar.tuesday = calendar.recipe
+      controller.recipe = null;
+    } else if (controller.day == "wednesday") {
+      controller.calendar.wednesday = calendar.recipe
+      controller.recipe = null;
+    } else if (controller.day == "thursday") {
+      controller.calendar.thursday = calendar.recipe
+      controller.recipe = null;
+    } else if (controller.day == "friday") {
+      controller.calendar.friday = calendar.recipe
+      controller.recipe = null;
+    } else {
+      controller.calendar.saturday = calendar.recipe
+      controller.recipe = null;
+    }
   }
 
   this.removeItem = function (index) {
