@@ -8,13 +8,13 @@ app.controller('calendarController', ['$http', function ($http) {
   this.searchTerm = null;
   this.recipe = null;
   this.calendar = {
-    sunday: "",
-    monday: "",
-    tuesday: "",
-    wednesday: "",
-    thursday: "",
-    friday: "",
-    saturday: ""
+    sunday: null,
+    monday: null,
+    tuesday: null,
+    wednesday: null,
+    thursday: null,
+    friday: null,
+    saturday: null
   }
   this.shoppingList = [];
 
@@ -33,34 +33,30 @@ app.controller('calendarController', ['$http', function ($http) {
   }
 
   this.chooseRecipe = function (index) {
-    controller.recipe = controller.searchResults[index].label
+    controller.recipe = controller.searchResults[index]
     for (var i = 0; i < controller.searchResults[index].ingredientLines.length; i++) {
       controller.shoppingList.push(controller.searchResults[index].ingredientLines[i])
       controller.searchTerm = null
     }
-
-    if (controller.day == "sunday") {
-      controller.calendar.sunday = calendar.recipe
-      controller.recipe = null;
-    } else if (controller.day == "monday") {
-      controller.calendar.monday = calendar.recipe
-      controller.recipe = null;
-    } else if (controller.day == "tuesday") {
-      controller.calendar.tuesday = calendar.recipe
-      controller.recipe = null;
-    } else if (controller.day == "wednesday") {
-      controller.calendar.wednesday = calendar.recipe
-      controller.recipe = null;
-    } else if (controller.day == "thursday") {
-      controller.calendar.thursday = calendar.recipe
-      controller.recipe = null;
-    } else if (controller.day == "friday") {
-      controller.calendar.friday = calendar.recipe
-      controller.recipe = null;
+    if (controller.day === "sunday") {
+      controller.calendar.sunday = controller.recipe.label
+    } else if (controller.day === "monday") {
+      controller.calendar.monday = controller.recipe.label
+    } else if (controller.day === "tuesday") {
+      controller.calendar.tuesday = controller.recipe.label
+    } else if (controller.day === "wednesday") {
+      controller.calendar.wednesday = controller.recipe.label
+    } else if (controller.day === "thursday") {
+      controller.calendar.thursday = controller.recipe.label
+    } else if (controller.day === "friday") {
+      controller.calendar.friday = controller.recipe.label
     } else {
-      controller.calendar.saturday = calendar.recipe
-      controller.recipe = null;
+      controller.calenda.saturday = controller.recipe.label
     }
+  }
+  this.setRecipe = function () {
+    console.log('clicked');
+    controller.calendar.night = controller.recipe.label
   }
 
   this.removeItem = function (index) {

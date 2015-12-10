@@ -41,40 +41,49 @@
           <option value="wednesday">Wednesday</option>
           <option value="thursday">Thursday</option>
           <option value="friday">Friday</option>
-          <option value="satday">Satday</option>
+          <option value="saturday">Saturday</option>
         </select>
       </form>
     </section>
     <section id="list">
       <h3 class="list-title">Shopping List</h3>
       <div class="shopping-list">
+        {{calCtrl.day}}
+        {{calCtrl.calendar}}
+        {{calCtrl.recipe.label}}
         <ul>
           <li ng-repeat="item in calCtrl.shoppingList track by $index" ng-click="calCtrl.removeItem($index)">{{item}}</li>
         </ul>
       </div>
     </section>
     <section id="calendar">
-      <div id="sunday" class="day" ng-click="calCtrl.placeRecipe(calCtrl.recipe.label)">
+      <div id="sunday" class="day">
         S
-        <p ng-bind="calCtrl.recipe.label"></p>
+        <p ng-bind="calCtrl.calendar.sunday"></p>
       </div>
       <div id="monday" class="day">
         M
+        <p ng-bind="calCtrl.calendar.monday"></p>
       </div>
       <div id="tuesday" class="day">
         T
+        <p ng-bind="calCtrl.calendar.tuesday"></p>
       </div>
       <div id="wednesday" class="day">
         W
+        <p ng-bind="calCtrl.calendar.wednesday"></p>
       </div>
       <div id="thursday" class="day">
         T
+        <p ng-bind="calCtrl.calendar.thursday"></p>
       </div>
       <div id="friday" class="day">
         F
+        <p ng-bind="calCtrl.calendar.friday"></p>
       </div>
       <div id="saturday" class="day">
         S
+        <p ng-bind="calCtrl.calendar.saturday"></p>
       </div>
     </section>
   </body>
