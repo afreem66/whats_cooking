@@ -32,18 +32,31 @@
         </ul>
       </div>
       <form class="find-recipe" ng-submit="calCtrl.newRecipe(calCtrl.appId, calCtrl.appKey)">
-        <input class="recipe-name" type="text" ng-model="calCtrl.recipe">
+        <input type="text" ng-model="calCtrl.searchTerm">
         <input type="submit" value="Find">
+        <select ng-model="calCtrl.day">
+          <option value="sunday">Sunday</option>
+          <option value="monday">Monday</option>
+          <option value="tuesday">Tuesday</option>
+          <option value="wednesday">Wednesday</option>
+          <option value="thursday">Thursday</option>
+          <option value="friday">Friday</option>
+          <option value="satday">Satday</option>
+        </select>
       </form>
     </section>
     <section id="list">
-      <h3>Shopping List</h3>
+      <h3 class="list-title">Shopping List</h3>
       <div class="shopping-list">
+        <ul>
+          <li ng-repeat="item in calCtrl.shoppingList track by $index" ng-click="calCtrl.removeItem($index)">{{item}}</li>
+        </ul>
       </div>
     </section>
     <section id="calendar">
-      <div id="sunday" class="day" ng-click="placeRecipe(calCtrl.recipe.label)">
+      <div id="sunday" class="day" ng-click="calCtrl.placeRecipe(calCtrl.recipe.label)">
         S
+        <p ng-bind="calCtrl.recipe.label"></p>
       </div>
       <div id="monday" class="day">
         M
