@@ -15,72 +15,72 @@
       <h2>What's Cooking tonight?</h2>
       <h3>  Search and Click to add to planner & shopping list</h3>
     </div>
+    <form class="find-recipe" ng-submit="ctrl.newRecipe(ctrl.appId, ctrl.appKey)">
+      <input type="text" ng-model="ctrl.searchTerm" placeholder="Find a Recipe">
+      <input type="submit" value="Find">
+      <select ng-model="ctrl.day">
+        <option value="sunday">Sunday</option>
+        <option value="monday">Monday</option>
+        <option value="tuesday">Tuesday</option>
+        <option value="wednesday">Wednesday</option>
+        <option value="thursday">Thursday</option>
+        <option value="friday">Friday</option>
+        <option value="saturday">Saturday</option>
+      </select>
+    </form>
   </header>
-  <body ng-controller="calendarController as calCtrl">
+  <body ng-controller="whatsCookingController as ctrl">
     <section id="search">
       <div class="results-container">
         <ul>
-        <div class="result" class="draggable" class='ui-widget-content' ng-repeat="recipe in calCtrl.searchResults track by $index" ng-click="calCtrl.chooseRecipe($index)">
+        <div class="result" class="draggable" class='ui-widget-content' ng-repeat="recipe in ctrl.searchResults track by $index" ng-click="ctrl.chooseRecipe($index)">
           <h4>{{recipe.label}}</h4>
           <ul>
             <li ng-repeat="item in recipe.ingredientLines">
               {{item}}
             </li>
           </ul>
-          <a href={{recipe.url}}>Source</a>
+          <a href={{recipe.url}}>Go to Source Page</a>
         </div>
         </ul>
       </div>
-      <form class="find-recipe" ng-submit="calCtrl.newRecipe(calCtrl.appId, calCtrl.appKey)">
-        <input type="text" ng-model="calCtrl.searchTerm">
-        <input type="submit" value="Find">
-        <select ng-model="calCtrl.day">
-          <option value="sunday">Sunday</option>
-          <option value="monday">Monday</option>
-          <option value="tuesday">Tuesday</option>
-          <option value="wednesday">Wednesday</option>
-          <option value="thursday">Thursday</option>
-          <option value="friday">Friday</option>
-          <option value="saturday">Saturday</option>
-        </select>
-      </form>
     </section>
     <section id="list">
       <h3 class="list-title">Shopping List</h3>
       <div class="shopping-list">
         <ul>
-          <li ng-repeat="item in calCtrl.shoppingList track by $index" ng-click="calCtrl.removeItem($index)">{{item}}</li>
+          <li ng-repeat="item in ctrl.shoppingList track by $index" ng-click="ctrl.removeItem($index)">{{item}}</li>
         </ul>
       </div>
     </section>
     <section id="calendar">
       <div id="sunday" class="day">
         S
-        <p ng-bind="calCtrl.calendar.sunday"></p>
+        <p ng-bind="ctrl.calendar.sunday"></p>
       </div>
       <div id="monday" class="day">
         M
-        <p ng-bind="calCtrl.calendar.monday"></p>
+        <p ng-bind="ctrl.calendar.monday"></p>
       </div>
       <div id="tuesday" class="day">
         T
-        <p ng-bind="calCtrl.calendar.tuesday"></p>
+        <p ng-bind="Ctrl.calendar.tuesday"></p>
       </div>
       <div id="wednesday" class="day">
         W
-        <p ng-bind="calCtrl.calendar.wednesday"></p>
+        <p ng-bind="ctrl.calendar.wednesday"></p>
       </div>
       <div id="thursday" class="day">
         T
-        <p ng-bind="calCtrl.calendar.thursday"></p>
+        <p ng-bind="ctrl.calendar.thursday"></p>
       </div>
       <div id="friday" class="day">
         F
-        <p ng-bind="calCtrl.calendar.friday"></p>
+        <p ng-bind="ctrl.calendar.friday"></p>
       </div>
       <div id="saturday" class="day">
         S
-        <p ng-bind="calCtrl.calendar.saturday"></p>
+        <p ng-bind="ctrl.calendar.saturday"></p>
       </div>
     </section>
   </body>

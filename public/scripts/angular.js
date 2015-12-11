@@ -1,6 +1,6 @@
 var app = angular.module('whatsCookingApp', []);
 
-app.controller('calendarController', ['$http', function ($http) {
+app.controller('whatsCookingController', ['$http', function ($http) {
   var controller = this;
 
   this.searchResults = [];

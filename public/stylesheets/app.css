@@ -3,11 +3,50 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 header {
   padding: 0 1rem;
 }
-.name {
-  text-align: right;
+
+.find-recipe {
+  top: 0;
+  right: 0;
+  position: absolute;
+  margin: 1rem;
+}
+input[type="text"] {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #333;
+  background: none;
+}
+input-placeholder {
+  color: #333;
+  text-align: center;
+}
+::-webkit-input-placeholder {
+  color: #333;
+  text-align: center;
+}
+:-moz-placeholder {
+  color: #333;
+  text-align: center;
+}
+::-moz-placeholder {
+  color: #333;
+  text-align: center;
+}
+:-ms-placeholder {
+  color: #333;
+  text-align: center;
+}
+
+body {
+  background: floralwhite;
+}
+
+li {
+  list-style: none;
 }
 
 #search {
@@ -17,6 +56,32 @@ header {
   background: #89C4F4;
 }
 
+.results-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: 1px solid #333;
+  overflow: scroll;
+}
+
+.result {
+  display: inline-block;
+  height: 250px;
+  width: 250px;
+  background: #E4F1FE;
+  color: #333;
+  border: 1px solid #333;
+  overflow: scroll;
+  margin: 1rem;
+  text-align: center;
+}
+.result a {
+  color: #333;
+  text-decoration: none;
+}
+.result a:hover {
+  text-decoration: underline;
+}
 #list {
   width: 50%;
   height: 50%;
@@ -27,9 +92,14 @@ header {
   font-family: 'La Belle Aurore', cursive;
   overflow: scroll;
 }
+
 #list>h3 {
   text-align: center;
   font-size: 2rem;
+}
+
+.shopping-list {
+  text-align: center;
 }
 
 #calendar {
@@ -47,7 +117,6 @@ header {
   width: 150px;
   border: 1px solid #333;
   margin: 1rem;
-  float: right;
   background: #F64747;
   color: #EEEEEE;
   text-align: center;
@@ -79,40 +148,4 @@ header {
 }
 #saturday {
   left: 84%;
-}
-
-.results-container {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  border: 1px solid #333;
-  overflow: scroll;
-}
-
-.result {
-  display: inline-block;
-  height: 250px;
-  width: 250px;
-  background: #E4F1FE;
-  color: #333;
-  border: 1px solid #333;
-  overflow: scroll;
-  margin: 1rem;
-  text-align: center;
-}
-
-.find-recipe {
-  z-index: 3;
-  position: fixed;
-  bottom: 0;
-}
-
-.shopping-list {
-  text-align: center;
-}
-
-
-
-li {
-  list-style: none;
 }
