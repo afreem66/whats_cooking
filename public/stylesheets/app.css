@@ -40,6 +40,24 @@ input-placeholder {
   color: #333;
   text-align: center;
 }
+input[type="submit"] {
+  outline: none;
+  border: 1px solid #333;
+  color: #333;
+  background: none;
+  padding: 0.2em;
+}
+input[type="submit"]:hover {
+  background: #333;
+  color: #f1f1f1;
+}
+select {
+  outline: none;
+  border: 1px solid #333;
+  color: #333;
+  background: none;
+  padding: 0.2em;
+}
 
 body {
   background: floralwhite;
@@ -93,9 +111,8 @@ li {
   overflow: scroll;
 }
 
-#list>h3 {
+.list-title {
   text-align: center;
-  font-size: 2rem;
 }
 
 .shopping-list {
@@ -112,7 +129,7 @@ li {
 .day {
   display: block;
   position: absolute;
-  top: 20%;
+  top: 25%;
   height: 150px;
   width: 150px;
   border: 1px solid #333;
@@ -149,3 +166,21 @@ li {
 #saturday {
   left: 84%;
 }
+ footer {
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   text-align: right;
+   margin: 1rem;
+ }
+ footer a {
+   color: #333;
+   border: 1px solid #333;
+   text-decoration: none;
+   padding: 1px;
+   font-size: 0.7rem;
+ }
+ footer a:hover {
+   background: #333;
+   color: #f1f1f1;
+ }

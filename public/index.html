@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="whatsCookingApp">
+<html ng-app="whatsCookingApp" ng-controller="whatsCookingController as ctrl">
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="stylesheets/app.css">
@@ -29,7 +29,7 @@
       </select>
     </form>
   </header>
-  <body ng-controller="whatsCookingController as ctrl">
+  <body>
     <section id="search">
       <div class="results-container">
         <ul>
@@ -47,6 +47,7 @@
     </section>
     <section id="list">
       <h3 class="list-title">Shopping List</h3>
+      <h5 class="list-title">click items that you already have to remove</h5>
       <div class="shopping-list">
         <ul>
           <li ng-repeat="item in ctrl.shoppingList track by $index" ng-click="ctrl.removeItem($index)">{{item}}</li>
@@ -83,5 +84,9 @@
         <p ng-bind="ctrl.calendar.saturday"></p>
       </div>
     </section>
+    <footer>
+      <h6>created for the eclectic chef by Andrew Freeman</h6>
+      <a href="github.com/afreem66/whats_cooking">Github</a>
+    </footer>
   </body>
 </html>
