@@ -110,16 +110,13 @@ li {
   background-image: url(http://www.wpclipart.com/education/supplies/paper/notepad_page.png);
   background-size: cover;
   position: absolute;
+  text-align: center;
   font-family: 'La Belle Aurore', cursive;
   overflow: scroll;
+  padding-top: 0.7rem;
 }
-
-.list-title {
-  text-align: center;
-}
-
 .shopping-list {
-  text-align: center;
+  padding-top: 1rem;
 }
 
 #calendar {
@@ -145,6 +142,16 @@ li {
 
 .day p {
   font-size: 1rem;
+}
+.day a {
+  color: #333;
+  text-decoration: none;
+  font-size: 0.8rem;
+  border: 1px solid #333;
+}
+.day a:hover {
+  color: #f1f1f1;
+  background: #333;
 }
 
 #sunday {

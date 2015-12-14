@@ -27,6 +27,7 @@
         <option value="friday">Friday</option>
         <option value="saturday">Saturday</option>
       </select>
+      Make sure to pick a day to place in calendar!
     </form>
   </header>
   <body>
@@ -48,7 +49,7 @@
       <h5 class="list-title">click items that you already have to remove</h5>
       <div class="shopping-list">
         <ul>
-          <li ng-repeat="item in ctrl.shoppingList track by $index" ng-model="item" ng-click="ctrl.removeItem($index)">
+          <li ng-repeat="item in ctrl.shoppingList track by $index" ng-bind="item" ng-click="ctrl.removeItem($index)">
           </li>
         </ul>
       </div>
