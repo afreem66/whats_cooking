@@ -39,19 +39,19 @@ app.controller('whatsCookingController', ['$http', function ($http) {
       controller.searchTerm = null
     }
     if (controller.day === "sunday") {
-      controller.calendar.sunday = controller.recipe.label
+      controller.calendar.sunday = controller.recipe
     } else if (controller.day === "monday") {
-      controller.calendar.monday = controller.recipe.label
+      controller.calendar.monday = controller.recipe
     } else if (controller.day === "tuesday") {
-      controller.calendar.tuesday = controller.recipe.label
+      controller.calendar.tuesday = controller.recipe
     } else if (controller.day === "wednesday") {
-      controller.calendar.wednesday = controller.recipe.label
+      controller.calendar.wednesday = controller.recipe
     } else if (controller.day === "thursday") {
-      controller.calendar.thursday = controller.recipe.label
+      controller.calendar.thursday = controller.recipe
     } else if (controller.day === "friday") {
-      controller.calendar.friday = controller.recipe.label
+      controller.calendar.friday = controller.recipe
     } else if (controller.day === "saturday"){
-      controller.calendar.saturday = controller.recipe.label
+      controller.calendar.saturday = controller.recipe
     }
   }
 

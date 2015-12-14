@@ -97,6 +97,8 @@ li {
 .result a {
   color: #333;
   text-decoration: none;
+  font-size: 1rem
+
 }
 .result a:hover {
   text-decoration: underline;

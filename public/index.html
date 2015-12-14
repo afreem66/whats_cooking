@@ -34,9 +34,9 @@
       <div class="results-container">
         <ul>
         <div class="result" ng-repeat="recipe in ctrl.searchResults track by $index" ng-click="ctrl.chooseRecipe($index)">
-          <h4>{{recipe.label}}</h4>
+          <h4 ng-bind="recipe.label"></h4>
           <ul>
-            <li ng-repeat="item in recipe.ingredientLines">{{item}}</li>
+            <li ng-repeat="item in recipe.ingredientLines" ng-bind="item"></li>
           </ul>
           <a href={{recipe.url}}>Go to Source Page</a>
         </div>
@@ -56,36 +56,43 @@
     <section id="calendar">
       <div id="sunday" class="day">
         S
-        <p ng-bind="ctrl.calendar.sunday"></p>
+        <p ng-bind="ctrl.calendar.sunday.label"></p>
+        <a ng-show="ctrl.calendar.sunday" href=ctrl.calendar.sunday.url>Go to source</a>
       </div>
       <div id="monday" class="day">
         M
-        <p ng-bind="ctrl.calendar.monday"></p>
+        <p ng-bind="ctrl.calendar.monday.label"></p>
+        <a ng-show="ctrl.calendar.monday" href=ctrl.calendar.monday.url>Go to source</a>
       </div>
       <div id="tuesday" class="day">
         T
-        <p ng-bind="Ctrl.calendar.tuesday"></p>
+        <p ng-bind="ctrl.calendar.tuesday.label"></p>
+        <a ng-show="ctrl.calendar.tuesday" href=ctrl.calendar.tuesday.url>Go to source</a>
       </div>
       <div id="wednesday" class="day">
         W
-        <p ng-bind="ctrl.calendar.wednesday"></p>
+        <p ng-bind="ctrl.calendar.wednesday.label"></p>
+        <a ng-show="ctrl.calendar.wednesday" href=ctrl.calendar.wednesday.url>Go to source</a>
       </div>
       <div id="thursday" class="day">
         T
-        <p ng-bind="ctrl.calendar.thursday"></p>
+        <p ng-bind="ctrl.calendar.thursday.label"></p>
+        <a ng-show="ctrl.calendar.thursday" href=ctrl.calendar.thursday.url>Go to source</a>
       </div>
       <div id="friday" class="day">
         F
-        <p ng-bind="ctrl.calendar.friday"></p>
+        <p ng-bind="ctrl.calendar.friday.label"></p>
+        <a ng-show="ctrl.calendar.friday" href=ctrl.calendar.friday.url>Go to source</a>
       </div>
       <div id="saturday" class="day">
         S
-        <p ng-bind="ctrl.calendar.saturday"></p>
+        <p ng-bind="ctrl.calendar.saturday.label"></p>
+        <a ng-show="ctrl.calendar.saturday" href=ctrl.calendar.saturday.url>Go to source</a>
       </div>
     </section>
     <footer>
       <h6>created for the eclectic chef by Andrew Freeman</h6>
-      <a href="github.com/afreem66/whats_cooking">Github</a>
+      <a href="https://github.com/afreem66/whats_cooking">Github</a>
     </footer>
   </body>
 </html>
