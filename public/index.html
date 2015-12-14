@@ -33,12 +33,10 @@
     <section id="search">
       <div class="results-container">
         <ul>
-        <div class="result" class="draggable" class='ui-widget-content' ng-repeat="recipe in ctrl.searchResults track by $index" ng-click="ctrl.chooseRecipe($index)">
+        <div class="result" ng-repeat="recipe in ctrl.searchResults track by $index" ng-click="ctrl.chooseRecipe($index)">
           <h4>{{recipe.label}}</h4>
           <ul>
-            <li ng-repeat="item in recipe.ingredientLines">
-              {{item}}
-            </li>
+            <li ng-repeat="item in recipe.ingredientLines">{{item}}</li>
           </ul>
           <a href={{recipe.url}}>Go to Source Page</a>
         </div>
@@ -50,7 +48,8 @@
       <h5 class="list-title">click items that you already have to remove</h5>
       <div class="shopping-list">
         <ul>
-          <li ng-repeat="item in ctrl.shoppingList track by $index" ng-click="ctrl.removeItem($index)">{{item}}</li>
+          <li ng-repeat="item in ctrl.shoppingList track by $index" ng-model="item" ng-click="ctrl.removeItem($index)">
+          </li>
         </ul>
       </div>
     </section>
