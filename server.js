@@ -8,7 +8,7 @@ server.use(express.static('./public'));
 server.use(bodyParser.json());
 server.use(morgan('dev'));
 
-server.get('/kevinisdumb', function (req, res) {
+server.get('/whatscooking', function (req, res) {
     res.json({
       appId : process.env.COOK_APP_ID,
       appKey : process.env.COOK_APP_KEY

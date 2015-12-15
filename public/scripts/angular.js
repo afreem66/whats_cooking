@@ -64,7 +64,7 @@ app.controller('whatsCookingController', ['$http', function ($http) {
     controller.shoppingList.splice(index, 1)
   }
 
-  $http.get('/kevinisdumb').then(function (response) {
+  $http.get('/whatscooking').then(function (response) {
     controller.appId = response.data.appId
     controller.appKey = response.data.appKey
   }, function (err) {
